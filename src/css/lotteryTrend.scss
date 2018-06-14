@@ -1,0 +1,117 @@
+//走势
+
+.lottery-trend-wrap{
+  position: absolute;
+  background: #f2f2f2;
+  width: 10.0rem;
+  top: 1rem;
+  bottom:0;
+  overflow: hidden;
+  color: #303030;
+
+
+  .am-tabs-tab-bar-wrap{
+    margin: px2rem(10px) 0 px2rem(18px);
+    .am-tabs-default-bar-tab{
+      padding: 0;
+      height:px2rem(60px);
+      color:#444;
+      background:#fff;
+      font-size: px2rem(26px);
+      border-right:1px solid #c2c2c4;
+      &:last-child{
+        border-right:none;
+      }
+    }
+    .am-tabs-default-bar-tab-active{
+      color:#fff;
+      background:#d22018;
+    }
+    .am-tabs-default-bar-underline{
+      display: none;
+    }
+  }
+  //双色球和3D没有头部切换
+  &.nohead{
+    .am-tabs-tab-bar-wrap{
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  //table
+  //b是
+  .trend-table-tr{
+    display: flex;
+    b,label{
+      flex-grow: 1;
+      flex-basis:px2rem(40px);
+      height:px2rem(40px);
+      line-height: px2rem(40px);
+      text-align: center;
+      background: #fff;
+      font-size: px2rem(20px);
+      align-items: center;
+      border-left:1px solid #c2c2c4;
+      &:first-child{
+        flex-grow: 0;
+        font-size: px2rem(22px);
+        flex-basis:px2rem(160px);
+        width:px2rem(160px);
+        border-left: none;
+      }
+
+    }
+
+  }
+
+  .trend-table-head.trend-table-tr{
+
+      b{
+        font-weight: 500;
+        height:px2rem(60px);
+        line-height:px2rem(60px);
+        border-bottom:1px solid #c2c2c4;
+        font-size: px2rem(26px);
+        color:#303030;
+      }
+
+
+  }
+  .trend-table-body{
+    position: absolute;
+    top:px2rem(60px);
+    bottom: 0;
+    width:100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    .trend-table-tr:nth-child(2n+1)  label{
+      background: #fffdeb;
+    }
+
+
+  }
+  //每种彩种对应颜色
+  .cell-big,.cell-odd,.cell-dragon{
+    color:#d22018;
+  }
+  .cell-small,.cell-even,.cell-tiger{
+    color:#1c971b
+  }
+  .cell-red{
+    color:#d22018;
+  }
+  .cell-green{
+    color:#1c971b;
+  }
+  .cell-blue{
+    color:#00b6ff;
+  }
+  .cell-orange{
+    color:#ff9300;
+  }
+  .cell-pink{
+    color: #ff06a8;
+  }
+}
+
